@@ -4,10 +4,10 @@ import { useAuth } from '../context/AuthContext';
 
 const Admin = () => {
     const { user } = useAuth();
-    const [users, setUsers] = useState([]);
+    // const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    const fetchUsers = async () => {
+/*     const fetchUsers = async () => {
       try {
         // Fetches all system users for administrative overview
         const response = await axiosInstance.get('/api/auth/users', {
@@ -19,18 +19,17 @@ const Admin = () => {
       }
     };
 
-    fetchUsers();
-  }, [user]);
+    fetchUsers(); */
+  }, [user]); 
 
   return (
         <div>
-            <h1>Admin Dashboard</h1>
-            <h2>Registered Users</h2>
-            <ul>
+            <h1>Admin Dashboard</h1>            
+            {/* <ul>
                 {users.map((user) => (
-                    <li key={user.id}>{user.email}</li>
+                   <li key={user.id}>{user.email}</li>
                 ))}
-            </ul>
+            </ul> */}
         </div>
     );
 };
