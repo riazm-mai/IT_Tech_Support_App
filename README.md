@@ -1,6 +1,6 @@
 ## IT Tech Support App
 
-1. What This App Does
+What This App Does
 
 This app is a simple tool for employees to report tech issues and for admins to handle them without any hassle.
 
