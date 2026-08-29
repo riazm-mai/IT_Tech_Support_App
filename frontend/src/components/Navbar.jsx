@@ -12,12 +12,19 @@ const Navbar = () => {
 
   return (
     <nav className="bg-blue-600 text-white p-4 flex justify-between items-center">
-      <Link to="/" className="text-2xl font-bold">Task Manager</Link>
+      <Link to="/" className="text-2xl font-bold">IT Tech Support App</Link>
       <div>
         {user ? (
           <>
-            <Link to="/tasks" className="mr-4">Tasks</Link>
-            <Link to="/profile" className="mr-4">Profile</Link>
+            {user.isadmin ? (
+                <Link to="/admin" className="mr-4 ">Admin Dashboard</Link>
+            ) : (  
+              <> 
+              <Link to="/tasks" className="mr-4">Tasks</Link>
+              <Link to="/profile" className="mr-4">Profile</Link>
+              </>
+            )}
+            
             <button
               onClick={handleLogout}
               className="bg-red-500 px-4 py-2 rounded hover:bg-red-700"

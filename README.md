@@ -1,26 +1,67 @@
-**Task Manager Application Overview:The task manager application is designed to help users efficiently manage their tasks and responsibilities by providing a user-friendly interface for creating, viewing, updating, and deleting tasks. It includes essential features such as secure user authentication, allowing individuals to sign up and log in to their accounts, as well as profile management to update personal information. With built-in validation such as input field validation and email validation, the application ensures a seamless user experience while enhancing productivity and organization in both personal and professional settings. **
+## IT Tech Support App
 
-**This apps **contain** the following features:**
+What This App Does
 
-* Signup
-* Login
-* Logout
-* Update profile
-* Add tasks
-* View tasks
-* Update tasks
-* Delete tasks
+This app is a simple tool for employees to report tech issues and for admins to handle them without any hassle.
 
-**This **app**lication** is**almost **a** precompiled** app**. However, students will develop some features,**such as adding tasks, viewing tasks, updating tasks, and **deleting** tasks**. **Students** will interact with GitHub when they develop the features.**
+Future roadmap of this app includes functionality which allows admin users to upload unstructured data in its knowledge base (which will be chunked in vector db). Tickets will be auto resolved based on using inference via llm. Furthermore guardrails will be implmeneted to ensure secure access to inference engine is available to end users.
 
----
+## For Users
 
-**Prerequisite:** Please install the following software and create account in following web tools** **
+* Create a Ticket: Log any tech issue easily by adding a Title, Description, and the Incident Date.
+* Track Your Issues: Check out the "My Tickets" section to see everything you’ve submitted.
+* Quick Edits: Fix a typo or delete a ticket right from your dashboard if you don't need it anymore.
 
-* **Nodejs [**[https://nodejs.org/en](https://nodejs.org/en)]** **
-* **Git [**[https://git-scm.com/](https://git-scm.com/)]** **
-* **VS code editor** [[https://code.visualstudio.com/](https://code.visualstudio.com/)]** **
-* **MongoDB Account** [[https://account.mongodb.com/account/login](https://account.mongodb.com/account/login)]** - In tutorial, we have also showed how can you create account and database: follow step number 2.**
-* **GitHub Account** [[https://github.com/signup?source=login](https://github.com/signup?source=login)]** **
+## For Admins
 
----
+* The Big Picture: View every single ticket submitted across the company under "Manage Tickets."
+* Admin Controls: Update ticket info on the fly using a handy slide-out menu, or delete things that don't belong.
+* Safety First: A popup confirmation makes sure you don't delete a ticket by accident.
+* Manage the Team: Head over to "Manage Users" to keep an eye on who is registered.
+
+ ## Project Tracking & Roadmap
+ 
+All user stories, sprint backlogs, and engineering tasks are tracked dynamically on our team board.
+ 
+Active Sprint Board & Product Backlog: Jira Workspace - ITSA Board (https://riazm-qut.atlassian.net/jira/software/projects/ITSA/boards/3/backlog)
+
+ ## Interactive Prototypes & Mockups
+ 
+ The user journey and visual presentation are mapped in high-fidelity designs. 
+ Interacting with the prototype demonstrates form processing, error fields, sliding windows, and deep-level validation warnings.
+ 
+ Live UI Prototype: Figma Design File - IT_Tech_Support_App (https://www.figma.com/proto/maOMKNl13B0BZw7LctAuBV/IT_Tech_Support_App?node-id=8-63&t=x48jZTsUY24RaOhC-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=8%3A63)
+
+ ## SysML Specifications
+ 
+ The technical foundations of this application are engineered using SysML structural and behavioral models.
+ 
+ Block Definition Diagram (BDD) - The platform splits dependencies across isolated operational blocks:
+ 
+ UI Block: Segregates views into a standard client user workspace and a protected admin operations area.
+ App Block: Drives backend computation, sorting logic into an identity checking service (Auth Module) and a database operations engine (Ticket Module).
+ DB Block: Organizes data collections into distinct collections for account keys (Users Collection) and issue entries (Tickets Collection).
+
+ ![SysML Block Definition Diagram](0_docs/sysml_bdd.png)
+
+ Requirements Diagram - It outline what the app must do, matching roles straight to their workspace permissions
+ 
+ Functional Context: Maps system usage dependencies - regular ticket and administrative tasks 
+ Non-Functional Context: Guides identity tokens, checking security credentials before exposing open tables, alongside strict design demands to keep user input and forms easy to navigate.
+
+  ![SysML Requirements Diagram](0_docs/sysml_req.png)
+
+ Sequence Diagram (User Ticket Creation Flow) - The application handles processing scripts in a clean linear chain:
+ 
+ Validation Loop: Client profiles ping the server logic. The logic runs input scripts, returning validation indicators or dropping invalid connection profiles immediately if parameters fail.
+ Persistence Loop: Successful registrations pass parameters down to the database layers, setting up clean records before throwing successful indicators back to client displays.
+ Intake Processing Loop: Active support tickets hit form validators, write files directly to system indices, and finish by pushing status indicators to the user workspace layout.
+
+   ![SysML Sequece Diagram](0_docs/sysml_seq.png)
+
+ # Technology Stack & Environment Configuration
+ Backend Engineering Framework: NestJS (TypeScript) Database Engine: MongoDB Encryption: JWT Authorization Tokens
+ Frontend Engineering Framework: React.js Styles: Tailwind CSS / Custom UI Layout Components
+
+ Client Application Access: http://localhost:3000
+ Backend Application Routing: http://localhost:5001

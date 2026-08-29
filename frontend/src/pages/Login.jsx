@@ -12,8 +12,12 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axiosInstance.post('/api/auth/login', formData);
-      login(response.data);
-      navigate('/tasks');
+      login(response.data);    
+      if (response.data.isadmin === true) {
+        navigate('/admin');
+      } else {
+        navigate('/tasks');
+      }
     } catch (error) {
       alert('Login failed. Please try again.');
     }
