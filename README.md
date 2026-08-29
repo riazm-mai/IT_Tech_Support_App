@@ -1,12 +1,14 @@
-## IT Tech Support App## 
+## IT Tech Support App
 
 1. What This App Does
 
 This app is a simple tool for employees to report tech issues and for admins to handle them without any hassle.
 
+Future roadmap of this app includes functionality which allows admin users to upload unstructured data in its knowledge base (which will be chunked in vector db). Tickets will be auto resolved based on using inference via llm. Furthermore guardrails will be implmeneted to ensure secure access to inference engine is available to end users.
+
 ## For Users
 
-* Drop a Ticket: Log any tech issue easily by adding a Title, Description, and the Incident Date.
+* Create a Ticket: Log any tech issue easily by adding a Title, Description, and the Incident Date.
 * Track Your Issues: Check out the "My Tickets" section to see everything you’ve submitted.
 * Quick Edits: Fix a typo or delete a ticket right from your dashboard if you don't need it anymore.
 
@@ -19,7 +21,7 @@ This app is a simple tool for employees to report tech issues and for admins to 
 
  ## Project Tracking & Roadmap
  
- All user stories, sprint backlogs, and engineering tasks are tracked dynamically on our team board.
+All user stories, sprint backlogs, and engineering tasks are tracked dynamically on our team board.
  
 Active Sprint Board & Product Backlog: Jira Workspace - ITSA Board (https://riazm-qut.atlassian.net/jira/software/projects/ITSA/boards/3/backlog)
 
