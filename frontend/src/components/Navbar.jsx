@@ -16,11 +16,14 @@ const Navbar = () => {
       <div>
         {user ? (
           <>
-            {user.isadmin && (
+            {user.isadmin ? (
                 <Link to="/admin" className="mr-4 ">Admin Dashboard</Link>
-             )}
-            <Link to="/tasks" className="mr-4">Tasks</Link>
-            <Link to="/profile" className="mr-4">Profile</Link>
+            ) : (  
+              <> 
+              <Link to="/tasks" className="mr-4">Tasks</Link>
+              <Link to="/profile" className="mr-4">Profile</Link>
+              </>
+            )}
             
             <button
               onClick={handleLogout}
