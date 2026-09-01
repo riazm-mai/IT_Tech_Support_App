@@ -20,7 +20,7 @@ const Navbar = () => {
                 <Link to="/admin" className="mr-4 ">Admin Dashboard</Link>
             ) : (  
               <> 
-              <Link to="/tasks" className="mr-4">Tasks</Link>
+              <Link to="/tasks" className="mr-4">Tickets</Link>
               <Link to="/profile" className="mr-4">Profile</Link>
               </>
             )}
