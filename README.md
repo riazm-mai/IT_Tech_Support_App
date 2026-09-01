@@ -60,8 +60,9 @@ Active Sprint Board & Product Backlog: Jira Workspace - ITSA Board (https://riaz
    ![SysML Sequece Diagram](0_docs/sysml_seq.png)
 
  # Technology Stack & Environment Configuration
- Backend Engineering Framework: NestJS (TypeScript) Database Engine: MongoDB Encryption: JWT Authorization Tokens
+ Backend Engineering Framework: NodeJS (TypeScript) Database Engine: MongoDB Encryption: JWT Authorization Tokens
  Frontend Engineering Framework: React.js Styles: Tailwind CSS / Custom UI Layout Components
 
- Client Application Access: http://localhost:3000
- Backend Application Routing: http://localhost:5001
+Backend Application Routing: http://localhost:5001  (~backend/npm start)
+Client Application Access: http://localhost:3000  (~frontend/npm start)   
+ 
